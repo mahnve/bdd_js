@@ -69,7 +69,7 @@
         '<a href="#" id="sv"/>' + 
         '<span id="close_sv">' +
         '</li><li><a href="#" id="en"/>' +
-        '<span id="close_en"></li></ul></div>')';
+        '<span id="close_en"></li></ul></div>');
       fooView = new FooPageView();
       assertEquals('en', 
         fooView.getLanguageOfClickedTab('#close_en'));
