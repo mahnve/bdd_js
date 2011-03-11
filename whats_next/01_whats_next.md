@@ -2,5 +2,5 @@
 # What's Next?
 
 !SLIDE
-#[Backbone.js](http://backbone.js)
+#[Backbone.js](http://documentcloud.github.com/backbone/)
 #[SproutCore](http://www.sproutcore.com/)
