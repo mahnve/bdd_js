@@ -3,6 +3,9 @@
 
 ![Demo app](demo_app.png)
 
+!SLIDE subsection
+# Logic Should Call Add Text On Click
+
 !SLIDE code
 
     @@@Javascript
@@ -100,6 +103,9 @@
 
 ![Fifth  run](fifth_run.png)
 
+!SLIDE subsection
+# Add Callback on Init
+
 !SLIDE code
 
     @@@Javascript
@@ -189,6 +195,9 @@
 !SLIDE center
 ![Ninth run](ninth_run.png)
 
+!SLIDE subsection
+
+# View Adds Text In Div
 !SLIDE code
 
     @@@Javascript

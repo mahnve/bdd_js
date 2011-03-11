@@ -17,6 +17,13 @@
       }
     });
 
+!SLIDE bullets
+# The Problem With _Tests_
+
+* Tends to be very white box
+* Tests methods
+* Not as efficient driving the code
+
 !SLIDE subsection
 # Logic Specs With Jasmine
 
@@ -54,6 +61,12 @@
       });
     });
 
+!SLIDE bullets
+# Advantage of BDD
+
+* Huge difference between "test" and "describe / it should"
+* Really drives the code from an usage perspective
+* Easier to understand
 
 !SLIDE subsection
 #View Tests

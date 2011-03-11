@@ -46,12 +46,30 @@
     }
 
 !SLIDE code
+
+    @@@Javascript
+
+    function FooPageView() {
+
+      this.addFooChangedListener = function(callback) {
+        browser.addChangeListener(callback);
+      };
+
+      this.showFoo = function() {
+        browser.show('#someId');
+      };
+      
+      ...
+    }
+
+
+!SLIDE code
   
     @@@Javascript
     $(document).ready(function() {
-        var userPageView = new UserPageView();
-        var userPageLogic = new UserPageLogic(userPageView);
-        userPageLogic.init();
+        var fooPageView = new FooPageView();
+        var fooPageLogic = new FooPageLogic(fooPageView);
+        fooPageLogic.init();
     });
 
 

@@ -11,7 +11,6 @@ function DemoPageLogic(demoPageView) {
 
 function DemoPageView() {
   this.addText = function() {
-    $('#text_here').append('Foo');
   };
 
   this.addLinkClickedCallback = function(callback) {
