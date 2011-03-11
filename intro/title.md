@@ -11,8 +11,6 @@ Valtech AB
 
 ![Valtech](valtech_logo.jpg)
 
-(Images in presentation are SVG's, so for now this presentation requires Firefox 4)
-
 !SLIDE bullets
 
 # About me 
@@ -26,7 +24,8 @@ Valtech AB
 
 !SLIDE bullets
 
-# My Javascript Background
+# Javascript and Me
 
 * Java and Ruby developer
-* Javascript as little as possible
+* Javascript by necessity and as little as possible
+* Warming up to each

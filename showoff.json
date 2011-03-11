@@ -3,6 +3,7 @@
     [ 
       {"section":"intro"},
       {"section":"background"},
+      {"section":"differences_test_bdd"},
       {"section":"thanks"}
     ]
 }

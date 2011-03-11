@@ -30,13 +30,33 @@
         $(this).upload('/upload/attachment', function(res) {
           if (res.status === "success") {
             $('.upload-field').val("");
-            var selector = $(".ui-tabs-selected a").attr("href") + ' .upload ul',
-                tab_id = $(".ui-tabs-selected a").attr("href").split("_"),
-                tab_number = tab_id[tab_id.length-1];
-                
-                browser.jQuery.createFileElement(res, tab_number).appendTo(selector);
+            var selector = $(".ui-tabs-selected a").attr("href") 
+              tab_number = tab_id[tab_id.length-1];
+              browser.jQuery.createFileElement(res, tab_number)
+                .appendTo(selector);
           }
         }, 'json');
       });
     }; 
+
+!SLIDE bullets
+# Javascript and Testing
+
+* Not the same testing culture as Java and Ruby
+* Code seldom separated
+* Tests run in browser
+
+!SLIDE bullets
+# Javascript Testing Frameworks
+
+* JSUnit - No longer maintained
+* [QUnit](http://docs.jquery.com/Qunit)
+* [JsTestDriver](http://code.google.com/p/js-test-driver/)
+
+
+!SLIDE bullets
+# BDD Javascript Frameworks
+
+* [Jasmine](http://pivotal.github.com/jasmine/)
+* [Vows](http://vowsjs.org/)
 
