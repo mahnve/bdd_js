@@ -207,10 +207,25 @@ function FooPageLogic(view) {
 }</code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content code" ref="layer_the_code/01_layer_the_code/6">
+<pre class="sh_Javascript"><code>
+function FooPageView() {
+
+  this.addFooChangedListener = function(callback) {
+    browser.addChangeListener(callback);
+  };
+
+  this.showFoo = function() {
+    browser.show('#someId');
+  };
+
+  ...
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="layer_the_code/01_layer_the_code/7">
 <pre class="sh_Javascript"><code>$(document).ready(function() {
-    var userPageView = new UserPageView();
-    var userPageLogic = new UserPageLogic(userPageView);
-    userPageLogic.init();
+    var fooPageView = new FooPageView();
+    var fooPageLogic = new FooPageLogic(fooPageView);
+    fooPageLogic.init();
 });</code></pre>
 </div>
 </div><div class="slide" data-transition="none"><div class="content bullets" ref="tools/01_tools/1">
@@ -255,10 +270,20 @@ function FooPageLogic(view) {
   }
 });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/3">
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="differences_test_bdd/01_differences_test_bdd/3">
+<h1>The Problem With <em>Tests</em></h1>
+
+<ul>
+<li>Tends to be very white box</li>
+<li>Tests methods</li>
+<li>Not as efficient driving the code</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/4">
 <h1>Logic Specs With Jasmine</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/4">
+</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/5">
 <pre class="sh_Javascript"><code>describe('foo view controller', function() {
 
   describe('a view for an existing foo', function() { 
@@ -274,7 +299,7 @@ function FooPageLogic(view) {
         spyOn(fooPageView, 'ckEditorifyEditors');
     });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/5">
+</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/6">
 <pre class="sh_Javascript"><code>    describe('showing something that is not a bar', function() {
       it('should not show dates', function() {
 
@@ -290,10 +315,20 @@ function FooPageLogic(view) {
   });
 });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/6">
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="differences_test_bdd/01_differences_test_bdd/7">
+<h1>Advantage of BDD</h1>
+
+<ul>
+<li>Huge difference between "test" and "describe / it should"</li>
+<li>Really drives the code from an usage perspective</li>
+<li>Easier to understand</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/8">
 <h1>View Tests</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/7">
+</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/9">
 <pre class="sh_Javascript"><code>
 testGetLanguageOfClosedTab: function() {
   $('body').append(
@@ -308,10 +343,10 @@ testGetLanguageOfClosedTab: function() {
     fooView.getLanguageOfClickedTab('#close_en'));
 }</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/8">
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="differences_test_bdd/01_differences_test_bdd/10">
 <h1>View Specs From Scratch</h1>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code Javascript" ref="differences_test_bdd/01_differences_test_bdd/9">
+</div><div class="slide" data-transition="none"><div class="content code Javascript" ref="differences_test_bdd/01_differences_test_bdd/11">
 <pre class="sh_Javascript"><code>describe('ThingsPageView', function() {
 
   var view;
@@ -320,7 +355,7 @@ testGetLanguageOfClosedTab: function() {
     view = new ThingsPageView();
   });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/10">
+</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/12">
 <pre class="sh_Javascript"><code>  describe('with a list of three things', function() {
 
     beforeEach(function() {
@@ -332,7 +367,7 @@ testGetLanguageOfClosedTab: function() {
         '&lt;/select&gt;');
     });</code></pre>
 </div>
-</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/11">
+</div><div class="slide" data-transition="none"><div class="content code" ref="differences_test_bdd/01_differences_test_bdd/13">
 <pre class="sh_Javascript"><code>    describe('when removing a thing from available list', function() {
       beforeEach(function() {
         view.removeAvailableThings(1);
@@ -344,6 +379,243 @@ testGetLanguageOfClosedTab: function() {
     });
   });
 });</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/1">
+<h1>So, from the start ...</h1>
+
+<p><img src="./file/demo/demo_app.png" width="355" height="219" alt="Demo app"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="demo/01_demo/2">
+<h1>Logic Should Call Add Text On Click</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/3">
+<pre class="sh_Javascript"><code>
+describe("Demo Page Logic", function() {
+
+  describe('someone clicks', function() {
+
+    var demoPageLogic;
+    var demoPageView;
+
+    beforeEach(function() {
+      demoPageView = new DemoPageView();
+      demoPageLogic = new DemoPageLogic(demoPageView);
+    });</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/4">
+<pre class="sh_Javascript"><code>    it('should add text to view', function() {
+      spyOn(demoPageView, 'addText');
+      demoPageLogic.clickHandler();
+      expect(demoPageView.addText).toHaveBeenCalled();
+    });
+  });
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/5">
+<p><img src="./file/demo/first_run.png" width="646" height="376" alt="First run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/6">
+<pre class="sh_Javascript"><code>
+function DemoPageLogic(demoPageView) {
+}
+
+function DemoPageView() {
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/7">
+<p><img src="./file/demo/second_run.png" width="657" height="274" alt="First run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/8">
+<pre class="sh_Javascript"><code>function DemoPageLogic(demoPageView) {
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/9">
+<p><img src="./file/demo/third_run.png" width="686" height="276" alt="Third run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/10">
+<pre class="sh_Javascript"><code>
+function DemoPageLogic(demoPageView) {
+  this.clickHandler = function() {
+  };
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/11">
+<p><img src="./file/demo/fourth_run.png" width="710" height="276" alt="Fourth run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/12">
+<pre class="sh_Javascript"><code>
+function DemoPageLogic(demoPageView) {
+  this.clickHandler = function() {
+    demoPageView.addText(); 
+  };
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/13">
+<p><img src="./file/demo/fifth_run.png" width="446" height="81" alt="Fifth  run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="demo/01_demo/14">
+<h1>Add Callback on Init</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/15">
+<pre class="sh_Javascript"><code>
+it('should add addText as callback on init', function() {
+  spyOn(demoPageView, 'addLinkClickedCallback');
+  demoPageLogic.init();
+  expect(demoPageView.addLinkClickedCallback)
+    .toHaveBeenCalledWith(demoPageLogic.clickHandler);
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/16">
+<p><img src="./file/demo/sixth_run.png" width="662" height="270" alt="Sixth run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/17">
+<pre class="sh_Javascript"><code>
+function DemoPageLogic(demoPageView) {
+  this.clickHandler = function() {
+    demoPageView.addText(); 
+  };
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+
+  this.addLinkClickedCallback = function(callback) {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/18">
+<p><img src="./file/demo/seventh_run.png" width="677" height="273" alt="Seventh run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/19">
+<pre class="sh_Javascript"><code>
+function DemoPageLogic(demoPageView) {
+
+  this.init = function() {
+  };
+
+  this.clickHandler = function() {
+    demoPageView.addText(); 
+  };
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+
+  this.addLinkClickedCallback = function(callback) {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/20">
+<p><img src="./file/demo/eigth_run.png" width="746" height="284" alt="Eigth run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/21">
+<pre class="sh_Javascript"><code>function DemoPageLogic(demoPageView) {
+
+  this.init = function() {
+    demoPageView.addLinkClickedCallback(this.clickHandler);
+  };
+
+  this.clickHandler = function() {
+    demoPageView.addText(); 
+  };
+}
+
+function DemoPageView() {
+  this.addText = function() {
+  };
+
+  this.addLinkClickedCallback = function(callback) {
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/22">
+<p><img src="./file/demo/ninth_run.png" width="496" height="85" alt="Ninth run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="demo/01_demo/23">
+<h1>View Adds Text In Div</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/24">
+<pre class="sh_Javascript"><code>describe("Demo Page View", function() {
+
+  var view;
+
+  beforeEach(function() {
+    view = new DemoPageView();
+  });
+
+  describe('without any text', function() {
+
+    beforeEach(function() {
+      $('body').append('&lt;div id="text_here"&gt;&lt;/div&gt;');
+    });</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/25">
+<pre class="sh_Javascript"><code>
+    describe('when adding text', function() {
+      beforeEach(function() {
+        view.addText();
+      });
+
+      it('should have text added', function() {
+        expect($('#text_here').text()).toEqual('Foo');
+      });
+    });
+  })
+});;</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/26">
+<p><img src="./file/demo/tenth_run.png" width="664" height="303" alt="Tenth run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/27">
+<pre class="sh_Javascript"><code>function DemoPageView() {
+  this.addText = function() {
+    $('#text_here').append('Foo');
+  };
+
+  this.addLinkClickedCallback = function(callback) {
+    $('a').click(callback);
+  };
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="demo/01_demo/28">
+<p><img src="./file/demo/eleventh_run.png" width="447" height="99" alt="Final run"/></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content subsection" ref="demo/01_demo/29">
+<h1>Glue</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content code" ref="demo/01_demo/30">
+<pre class="sh_Javascript"><code>$(document).ready(function() {
+    var demoPageView = new DemoPageView();
+    var demoPageLogic = new DemoPageLogic(demoPageView);
+    demoPageLogic.init();
+});</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="whats_next/01_whats_next">
+<h1>What's Next?</h1>
+
+<ul>
+<li><a href="http://documentcloud.github.com/backbone/">Backbone.js</a></li>
+<li><a href="http://www.sproutcore.com/">SproutCore</a></li>
+<li>Running specs in Node - already here</li>
+</ul>
+
 </div>
 </div><div class="slide" data-transition="none"><div class="content center" ref="thanks/thanks">
 <h1>Thank You!</h1>
