@@ -1,0 +1,8 @@
+{ "name": "BDD - JS", 
+  "sections": 
+    [ 
+      {"section":"intro"},
+      {"section":"background"},
+      {"section":"thanks"}
+    ]
+}
