@@ -3,6 +3,8 @@
     [ 
       {"section":"intro"},
       {"section":"background"},
+      {"section":"layer_the_code"},
+      {"section":"tools"},
       {"section":"differences_test_bdd"},
       {"section":"thanks"}
     ]
