@@ -45,4 +45,3 @@
 * Not the same testing culture as Java and Ruby
 * Code seldom separated
 * Tests run in browser
-
