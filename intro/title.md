@@ -22,6 +22,20 @@ Valtech AB
 
 # Q: Relationship to Javascript?
 
+!SLIDE 
+
+# Q: Experience of TDD/BDD?
+
+!SLIDE bullets
+
+# What is BDD?
+
+> "BDD is TDD done right"
+
+> "TDD means 'write the test first'. BDD takes this idea to a more general
+> level: 'write the client first' (the outside)"   
+> - Aslak Hellesøy
+>
 !SLIDE bullets
 
 # Javascript and Me
