@@ -35,7 +35,7 @@ Valtech AB
 > "TDD means 'write the test first'. BDD takes this idea to a more general
 > level: 'write the client first' (the outside)"   
 > - Aslak Hellesøy
->
+
 !SLIDE bullets
 
 # Javascript and Me

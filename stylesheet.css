@@ -22,10 +22,10 @@
 }
 
 .content blockquote {
-  font-size: 36px;
-  font-style: italic;
+  font-size: 40px;
 }
 
 .content blockquote p {
   padding-bottom: 10px;
+  line-height: 1.1em;
 }
