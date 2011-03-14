@@ -43,5 +43,5 @@ Valtech AB
 * Java and Ruby developer
 * Javascript by necessity and as little as possible
 * Warming up to each
-* Saw presentation at XP2010 by [@lucagrulla](http://www.lucagrulla.it) and 
+* Saw presentation at XP2010 by [Luca Grulla](http://www.lucagrulla.it) and 
   [Brian Blignaut](http://www.twitter.com/gurrie09)
