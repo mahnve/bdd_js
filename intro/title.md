@@ -26,7 +26,7 @@ Valtech AB
 
 # Q: Experience of TDD/BDD?
 
-!SLIDE bullets
+!SLIDE 
 
 # What is BDD?
 

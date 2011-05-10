@@ -23,6 +23,8 @@
 
 .content blockquote {
   font-size: 40px;
+  font-style: italic;
+  margin: 0 20px 0 20px;
 }
 
 .content blockquote p {
