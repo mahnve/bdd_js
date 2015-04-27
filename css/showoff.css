@@ -1,70 +1,70 @@
 @media screen {
-  body {
-      font-size: 100%;
-      font-family: "Gill Sans", Helvetica, Arial, sans-serif;
-      background:#333;
-      overflow:hidden;
-      margin:0;
-      padding:0;
-  }
+    body {
+        font-size: 100%;
+        font-family: "Gill Sans", Helvetica, Arial, sans-serif;
+        background:#333;
+        overflow:hidden;
+        margin:0;
+        padding:0;
+    }
 
-  #preso, .slide {
-      background: #fff;
-      width: 1024px;
-      height: 768px;
-      margin-left:auto;
-      margin-right:auto;
-      overflow:hidden;
-      -webkit-box-shadow:0 0 25px rgba(0,0,0,0.35);
-      -moz-box-shadow:0 0 25px rgba(0,0,0,0.35);
-      box-shadow:0 0 25px rgba(0,0,0,0.35);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-  }
+    #preso, .slide {
+        background: #fff;
+        width: 1024px;
+        height: 768px;
+        margin-left:auto;
+        margin-right:auto;
+        overflow:hidden;
+        -webkit-box-shadow:0 0 25px rgba(0,0,0,0.35);
+        -moz-box-shadow:0 0 25px rgba(0,0,0,0.35);
+        box-shadow:0 0 25px rgba(0,0,0,0.35);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
-  #preso, .slide.background-fit {
-      background-size: contain;
-  }
+    #preso, .slide.background-fit {
+        background-size: contain;
+    }
 
-  #footer {
-      background: rgba(221,221,221,0.75);
-      color:#333;
-      padding: 2px 5px;
-      width: 1005px;
-      height: 20px;
-      line-height:20px;
-      font-size:14px;
-      position:relative;
-      top:-24px;
-      margin:0 auto;
-      -webkit-border-top-left-radius: 3px;
-      -webkit-border-top-right-radius: 3px;
-      -moz-border-radius-topleft: 3px;
-      -moz-border-radius-topright: 3px;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-      z-index: 2147483647; /* max, see http://www.puidokas.com/max-z-index/ */
-      display: none;
-  }
-  #followMode {
-    display: none;
-  }
-  #pauseScreen {
-      background: rgba(0, 0, 0, 0.85);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      display: none;
-      margin: auto;
-      color: white;
-      font-size: 2em;
-      padding: 1em;
-      z-index: 2147483647; /* max, see http://www.puidokas.com/max-z-index/ */
-      text-align: center;
-  }
+    #footer {
+        background: rgba(221,221,221,0.75);
+        color:#333;
+        padding: 2px 5px;
+        width: 1005px;
+        height: 20px;
+        line-height:20px;
+        font-size:14px;
+        position:relative;
+        top:-24px;
+        margin:0 auto;
+        -webkit-border-top-left-radius: 3px;
+        -webkit-border-top-right-radius: 3px;
+        -moz-border-radius-topleft: 3px;
+        -moz-border-radius-topright: 3px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        z-index: 2147483647; /* max, see http://www.puidokas.com/max-z-index/ */
+        display: none;
+    }
+    #followMode {
+        display: none;
+    }
+    #pauseScreen {
+        background: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: none;
+        margin: auto;
+        color: white;
+        font-size: 2em;
+        padding: 1em;
+        z-index: 2147483647; /* max, see http://www.puidokas.com/max-z-index/ */
+        text-align: center;
+    }
 }
 
 /* plain (non-bullet) text */
